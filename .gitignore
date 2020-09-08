@@ -1,4 +1,8 @@
+venv/
+py36-venv/
 py37-venv/
+
+.idea/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

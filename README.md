@@ -35,36 +35,60 @@ deactivate
 
 ### 安装 Django
 
-作为 Python Web 框架，Django 需要 Python，在安装 Python 同时需要安装 pip。
+进入虚拟环境，安装 Django。
 
-（1）在线安装 Django，指定版本安装，目前 1.11 的最新版为 1.11.11
+（1）在线安装 Django，指定版本安装，目前 2.2 LTS 的最新版为 2.2.16
 
 ```shell
-pip3 install django==1.11.11
+pip install Django==2.2.16
 ```
 
-默认会安装：`Django==1.11.11` 和 `pytz==2020.1`
+默认会安装：`Django==2.2.16` 和 `pytz==2020.1`
 
 （2）检测当前是否安装 Django 及版本
 
 ```shell
-python3 -m django --version
+python -m django --version
 
-1.11.11
+2.2.16
 ```
 
-或者使用 `pip3 freeze` 命令检查
+或者使用 `pip freeze` 命令检查
 
 ```shell
-pip3 freeze | grep Django
+pip freeze | grep Django
 
-Django==1.11.11
+Django==2.2.16
 ```
 
 此外，我们也可以先下载安装包，再指定安装包安装：
 
 ```shell
-pip download django=1.11.11 -d ./
-pip install Django-1.11.11-py2.py3-none-any.whl
+pip download django=2.2.16 -d ./
+pip install Django-2.2.16-py2.py3-none-any.whl
+```
+
+
+
+### 创建项目
+
+```shell
+django-admin startproject webserver
+```
+
+
+
+### 运行项目
+
+```shell
+python manage.py runserver
+```
+
+
+
+### 创建应用
+
+```shell
+python manage.py startapp devices
 ```
 
