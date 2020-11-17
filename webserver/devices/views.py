@@ -3,4 +3,5 @@ from django.http import HttpResponse
 
 # Create your views here.
 def index(request):
-    return HttpResponse("FCTC-AIR devices")
+    #return HttpResponse("FCTC-AIR devices")
+    return render(request, "index.html")
