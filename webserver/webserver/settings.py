@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'devices',
+    'api',
 ]
 
 MIDDLEWARE = [
@@ -89,7 +91,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'fctc_air',
         'USER': 'root',
-        'PASSWORD': 'lu1010',
+        'PASSWORD': '',
         'HOST': 'localhost',
         'PORT': '3306',
     }
