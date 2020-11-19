@@ -47,15 +47,19 @@ def exec_remote_cmd(ssh, cmd):
     res = stdout.read().decode()
     return res
 
+
 def get_latest_data(request, deviceName):
     try:
-        s = AirData.objects.get(dn=deviceName)
+        #s = AirData.objects.get(dn=deviceName)
+        s = AirData.objects.filter(dn=deviceName).last()
+        data = {'dn': s.dn, 'temp': s.temp, 'humi': s.humi, 'dust': s.dust, 'tvoc': s.tvoc, 'eco2': s.eco2, 'hcho': s.hcho}
         #return HttpResponse(s)
     except:
-        s = "No data"
+        data = {'error': 'No data'}
     finally:
-        return JsonResponse({'id': 'abc'})
+        return JsonResponse(data)
         #return HttpResponse(s, content_type="application/json")
+
 
 def test(request, id):
     try:
