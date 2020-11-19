@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from api.models import AirData
+from api.models import TestUsers
 
 import paramiko
 import psutil
@@ -54,7 +55,7 @@ def get_latest_data(request, deviceName):
 
 def test(request, id):
     try:
-        s = AirData.objects.get(id=id)
+        s = TestUsers.objects.get(id=id)
         return HttpResponse(s)
     except:
         return HttpResponse("test failed")
