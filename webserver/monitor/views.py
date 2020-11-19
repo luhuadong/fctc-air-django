@@ -28,8 +28,8 @@ def index(request, pIndex=1):
     pList = p.page_range
     pNum = p.num_pages
     context = {"hostlist": aList, "pList": pList, "pIndex": int(pIndex), "pNum": int(pNum)}
-    print('-' * 12)
-    print(context)
+    #print('-' * 12)
+    #print(context)
 
     return render(request, "monitor/index.html", context)
 
