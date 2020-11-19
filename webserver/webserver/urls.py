@@ -21,4 +21,5 @@ urlpatterns = [
     path('monitor/', include('monitor.urls')),
     #path('devices/', include('devices.urls')),
     path('', include('devices.urls')),
+    path('api/', include('api.urls')),
 ]
