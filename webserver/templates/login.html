@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title>登录-LinuxMM监控中心</title>
+    <title>登录-FCTC监控中心</title>
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
     <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
@@ -50,7 +50,7 @@
     <div class="row">
         <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
             <h3 align="center">系统登录</h3><br>
-            <p><img src="{% static 'images/LinuxMM.jpeg' %}"></p>
+            <p><img src="{% static 'images/sky_600x400.jpg' %}"></p>
             <div align="center">
                 <form id="login-form" method="post" class="panel-default" action="{% url 'dologin' %}">
                 {% csrf_token %}
@@ -64,7 +64,7 @@
             {% if info %}
                 <div class="alert alert-danger" role="alert"><span>{{ info }}</span> 测试账号：admin，密码：20181024</div>
             {% else %}
-                <div class="alert alert-info" role="alert">温馨提示！测试账号：admin，密码：20181024</div>
+                <div class="alert alert-info" role="alert">温馨提示！测试账号：admin，密码：20201024</div>
             {% endif %}
 
         </div>
@@ -75,7 +75,7 @@
 <footer class="container-fluid foot-wrap navbar-fixed-bottom">
     <div class="container">
         <div class="row" align="center">
-            <p>Copyright &copy; 2018 by 东哥的Python实验室. 版权所有</p>
+            <p>Copyright &copy; 2020 by FCTC-Air Team. 版权所有</p>
             <!--<br>Tel: +86 15899962740-->
         </div>
     </div>
