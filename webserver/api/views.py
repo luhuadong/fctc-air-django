@@ -51,3 +51,10 @@ def get_latest_data(request, deviceName):
         return HttpResponse(s)
     except:
         return HttpResponse("No data")
+
+def test(request, id):
+    try:
+        s = AirData.objects.get(id=id)
+        return HttpResponse(s)
+    except:
+        return HttpResponse("test failed")
