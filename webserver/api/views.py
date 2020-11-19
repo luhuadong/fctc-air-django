@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from api.models import AirData
 
 import paramiko
 import psutil
@@ -44,3 +45,9 @@ def exec_remote_cmd(ssh, cmd):
     res = stdout.read().decode()
     return res
 
+def get_latest_data(request, deviceName):
+    try:
+        s = AirData.objects.get(dn=deviceName)
+        return HttpResponse(s)
+    except:
+        return HttpResponse("No data")
