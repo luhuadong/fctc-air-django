@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.http import JsonResponse
 from api.models import AirData
 from api.models import TestUsers
 
@@ -53,7 +54,8 @@ def get_latest_data(request, deviceName):
     except:
         s = "No data"
     finally:
-        return HttpResponse(s, content_type="application/json")
+        return JsonResponse({'id': 'abc'})
+        #return HttpResponse(s, content_type="application/json")
 
 def test(request, id):
     try:
