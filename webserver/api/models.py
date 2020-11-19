@@ -40,7 +40,7 @@ class AirData(models.Model):
     tvoc = models.IntegerField()
     eco2 = models.IntegerField()
     hcho = models.IntegerField()
-    cdate = models.DateTimeField()
+    #cdate = models.DateTimeField()
 
     def toDict(self):
         ob = {
@@ -52,12 +52,12 @@ class AirData(models.Model):
             'tvoc' : self.tvoc,
             'eco2' : self.eco2,
             'hcho' : self.hcho,
-            'cdate': self.cdate
+        #    'cdate': self.cdate
         }
         return ob
 
-    def __str__(self):
-        return self.dn + ":" + str(self.temp)
+    #def __str__(self):
+    #    return self.dn + ":" + str(self.temp)
 
     class Meta:
         db_table = 'airdata' # 指定表名
