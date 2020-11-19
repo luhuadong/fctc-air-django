@@ -13,8 +13,8 @@ urlpatterns = [
     url(r'^dologin$', views.dologin, name="dologin"),
     url(r'^logout$',  views.logout,  name="logout"),
 
-    url(r'^', views.index, name='index'),
-    url(r'(?P<pIndex>[0-99]+)$', views.index, name='index'),
+    url(r'^index$', views.index, name='index'),
+    url(r'^index/(?P<pIndex>[0-99]+)$', views.index, name='index'),
 
     url(r'^add$', views.add, name='monitor_add'),
     url(r'^insert$', views.insert, name='monitor_insert'),
